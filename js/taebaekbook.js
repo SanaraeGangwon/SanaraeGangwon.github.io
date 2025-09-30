@@ -44,7 +44,7 @@ function loadPage(page, pageElement) {
 
 	// Load the page
 
-	img.attr('src', 'dawonPages/' +  page + '.jpg');
+	img.attr('src', 'Tales01Pages/' +  page + '.jpg');
 
 	loadRegions(page, pageElement);
 
@@ -74,7 +74,7 @@ function zoomTo(event) {
 
 function loadRegions(page, element) {
 
-	$.getJSON('dawonPages/'+page+'-regions.json').
+	$.getJSON('Tales01Pages/'+page+'-regions.json').
 		done(function(data) {
 
 			$.each(data, function(key, region) {
@@ -175,7 +175,7 @@ function loadLargePage(page, pageElement) {
 
 	// Loadnew page
 	
-	img.attr('src', 'dawonPages/' +  page + '-large.jpg');
+	img.attr('src', 'Tales01Pages/' +  page + '-large.jpg');
 }
 
 // Load small page
@@ -189,7 +189,7 @@ function loadSmallPage(page, pageElement) {
 	img.unbind('load');
 	// Loadnew page
 
-	img.attr('src', 'dawonPages/' +  page + '.jpg');
+	img.attr('src', 'Tales01Pages/' +  page + '.jpg');
 }
 
 // http://code.google.com/p/chromium/issues/detail?id=128488
@@ -298,7 +298,7 @@ function setPreview(view) {
 
 	var previewWidth = 112,
 		previewHeight = 73,
-		previewSrc = 'dawonPages/preview.jpg',
+		previewSrc = 'Tales01Pages/preview.jpg',
 		preview = $(_thumbPreview.children(':first')),
 		numPages = (view==1 || view==$('#slider').slider('option', 'max')) ? 1 : 2,
 		width = (numPages==1) ? previewWidth/2 : previewWidth;
