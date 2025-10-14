@@ -29,6 +29,8 @@
 </div>
 
 <!-- Thumbnails -->
+
+<!--
 <div class="thumbnails">
 	<div>
 		<ul>
@@ -70,7 +72,7 @@
 		<ul>
 	<div>	
 </div>
-</div>
+</div> -->
 
 <script type="text/javascript">
 
@@ -164,13 +166,13 @@ function loadApp() {
 					disableControls(page);
 					
 
-					$('.thumbnails .page-'+currentPage).
-						parent().
-						removeClass('current');
+					//$('.thumbnails .page-'+currentPage).
+					//	parent().
+					//	removeClass('current');
 
-					$('.thumbnails .page-'+page).
-						parent().
-						addClass('current');
+					//$('.thumbnails .page-'+page).
+					//	parent().
+					//	addClass('current');
 
 
 
@@ -257,7 +259,7 @@ function loadApp() {
 			zoomOut: function () {
 
 				$('.exit-message').hide();
-				$('.thumbnails').fadeIn();
+				//$('.thumbnails').fadeIn();
 				$('.made').fadeIn();
 				$('.zoom-icon').removeClass('zoom-icon-out').addClass('zoom-icon-in');
 
@@ -336,52 +338,52 @@ function loadApp() {
 
 	// Events for thumbnails
 
-	$('.thumbnails').click(function(event) {
-		
-		var page;
+	//$('.thumbnails').click(function(event) {
+	//	
+	//	var page;
 
-		if (event.target && (page=/page-([0-9]+)/.exec($(event.target).attr('class'))) ) {
-		
-			$('.magazine').turn('page', page[1]);
-		}
-	});
+	//	if (event.target && (page=/page-([0-9]+)/.exec($(event.target).attr('class'))) ) {
+	//	
+	//		$('.magazine').turn('page', page[1]);
+	//	}
+	//});
 
-	$('.thumbnails li').
-		bind($.mouseEvents.over, function() {
-			
-			$(this).addClass('thumb-hover');
+	//$('.thumbnails li').
+	//	bind($.mouseEvents.over, function() {
+	//		
+	//		$(this).addClass('thumb-hover');
+//
+//		}).bind($.mouseEvents.out, function() {
+//			
+//			$(this).removeClass('thumb-hover');
+//
+//		});
 
-		}).bind($.mouseEvents.out, function() {
-			
-			$(this).removeClass('thumb-hover');
-
-		});
-
-	if ($.isTouch) {
-	
-		$('.thumbnails').
-			addClass('thumbanils-touch').
-			bind($.mouseEvents.move, function(event) {
-				event.preventDefault();
-			});
-
-	} else {
-
-		$('.thumbnails ul').mouseover(function() {
-
-			$('.thumbnails').addClass('thumbnails-hover');
-
-		}).mousedown(function() {
-
-			return false;
-
-		}).mouseout(function() {
-
-			$('.thumbnails').removeClass('thumbnails-hover');
-
-		});
-
-	}
+//	if ($.isTouch) {
+//	
+//		$('.thumbnails').
+//			addClass('thumbanils-touch').
+//			bind($.mouseEvents.move, function(event) {
+//				event.preventDefault();
+//			});
+//
+//	} else {
+//
+//		$('.thumbnails ul').mouseover(function() {
+//
+//			$('.thumbnails').addClass('thumbnails-hover');
+//
+//		}).mousedown(function() {
+//
+//			return false;
+//
+//		}).mouseout(function() {
+//
+//			$('.thumbnails').removeClass('thumbnails-hover');
+//
+//		});
+//
+//	}
 
 
 	// Regions
